@@ -8,10 +8,13 @@ public class PlayerAction : MonoBehaviour
     public float moveForce = 10f;
     public float jumpForce = 11f;
     private float movementX;
+
     private Rigidbody2D theBody;
     private Animator anime;
-    //private WALK_ANIMATION = "Walk";
+    private string WALK_ANIMATION = "Walk";
     private SpriteRenderer sr;
+    private bool isontheGround = true;
+    private string GROUND_TAG = "Ground";
 
     private void Awake()
     {
@@ -35,7 +38,7 @@ public class PlayerAction : MonoBehaviour
         //pos.y =0;
         //transform.position = pos;
         PlayerMoveKeyboard();
-        //AnimatePlayer();
+        AnimatePlayer();
         
     }
 
@@ -53,18 +56,45 @@ public class PlayerAction : MonoBehaviour
 
     }
     
-
     void AnimatePlayer()
     {
-
+        if (movementX < 0)
+        {
+            anime.SetBool(WALK_ANIMATION, true);
+            sr.flipX = true;
+        }
+        else if (movementX > 0)
+        {
+            anime.SetBool(WALK_ANIMATION, true);
+            sr.flipX = false;
+        }
+        else 
+        {
+            anime.SetBool(WALK_ANIMATION, false);
+        }
 
     }
 
     void PlayerJump()
     {
-        if (Input.GetButtonDown("Jump")) {
+        if (Input.GetButtonDown("Jump") && isontheGround) {
+
+            isontheGround = false;
             theBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
 
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        
+        if (collision.gameObject.CompareTag(GROUND_TAG)) {
+            isontheGround = true;
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
     }
 }
