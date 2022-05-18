@@ -15,6 +15,8 @@ public class PlayerAction : MonoBehaviour
     private SpriteRenderer sr;
     private bool isontheGround = true;
     private string GROUND_TAG = "Ground";
+   private string BUBBLE_TAG = "Bubble";
+
 
     private void Awake()
     {
@@ -87,14 +89,16 @@ public class PlayerAction : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         
-        if (collision.gameObject.CompareTag(GROUND_TAG)) {
+        if (collision.gameObject.CompareTag(GROUND_TAG)) 
             isontheGround = true;
-        }
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
+    private void OnTriggerEnter2D(Collider2D collision) {
+
+        if (collision.CompareTag(BUBBLE_TAG))
+            Destroy(collision.gameObject);
         
     }
+    
 }
