@@ -23,8 +23,7 @@ public class BubblesSpawner : MonoBehaviour
     
     IEnumerator SpawnBubble() {
         
-        while (true)
-        {
+        while (true) {
             yield return new WaitForSeconds(Random.Range(3, 8));
 
             randomIndex = Random.Range(0, bubbleRef.Length);
@@ -38,8 +37,7 @@ public class BubblesSpawner : MonoBehaviour
                 spawnedBubble.GetComponent<Bubbles>().speed = Random.Range(3, 8);
 
             }
-            else
-            {
+            else {
                 spawnedBubble.transform.position = rightPos.position;
                 spawnedBubble.GetComponent<Bubbles>().speed = -Random.Range(3, 8);
             }

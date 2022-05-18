@@ -15,7 +15,7 @@ public class PlayerAction : MonoBehaviour
     private SpriteRenderer sr;
     private bool isontheGround = true;
     private string GROUND_TAG = "Ground";
-   private string BUBBLE_TAG = "Bubble";
+    private string BUBBLE_TAG = "Bubble";
 
 
     private void Awake()
@@ -34,11 +34,6 @@ public class PlayerAction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //float h = Input.GetAxis("Horizontal");
-        //Vector2 pos = transform.position;
-        //pos.x += h * speed * Time.deltaTime;
-        //pos.y =0;
-        //transform.position = pos;
         PlayerMoveKeyboard();
         AnimatePlayer();
         
@@ -60,18 +55,15 @@ public class PlayerAction : MonoBehaviour
     
     void AnimatePlayer()
     {
-        if (movementX < 0)
-        {
+        if (movementX < 0) {
             anime.SetBool(WALK_ANIMATION, true);
             sr.flipX = true;
         }
-        else if (movementX > 0)
-        {
+        else if (movementX > 0) {
             anime.SetBool(WALK_ANIMATION, true);
             sr.flipX = false;
         }
-        else 
-        {
+        else {
             anime.SetBool(WALK_ANIMATION, false);
         }
 
