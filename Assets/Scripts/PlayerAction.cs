@@ -15,7 +15,12 @@ public class PlayerAction : MonoBehaviour
     private SpriteRenderer sr;
     private bool isontheGround = true;
     private string GROUND_TAG = "Ground";
-    private string BUBBLE_TAG = "Bubble";
+    private string KBUBBLE_TAG = "KnowledgeBubble";
+    private string RBUBBLE_TAG = "RandomBubble";
+
+    //private SpriteRenderer otherSprite;
+
+    private int knowledgeEarned;
 
 
     private void Awake()
@@ -23,6 +28,7 @@ public class PlayerAction : MonoBehaviour
         theBody = GetComponent<Rigidbody2D>();
         anime = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        knowledgeEarned = 0;
     }
 
     // Start is called before the first frame update
@@ -88,9 +94,23 @@ public class PlayerAction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
 
-        if (collision.CompareTag(BUBBLE_TAG))
-            Destroy(collision.gameObject);
-        
-    }
+        if (collision.CompareTag(KBUBBLE_TAG)) { 
+            if (knowledgeEarned < 10 && knowledgeEarned >= 0) {
+                knowledgeEarned ++;
+                Debug.Log("Knowledge is increasing! " + knowledgeEarned);
+            }
+            else {
+               Debug.Log("Congrats! You received a mental capacity bonus! " + knowledgeEarned);
+               //game stop, and go to result screen
+            }
+        }
+        else if (collision.CompareTag(RBUBBLE_TAG)) {
+        if (knowledgeEarned > 0 && knowledgeEarned <= 10) {
+                knowledgeEarned --;
+                Debug.Log("Knowledge is decreasing! " + knowledgeEarned);
+        }
+        }
+        Destroy(collision.gameObject);
+    }       
     
 }

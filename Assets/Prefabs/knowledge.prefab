@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6049779100357647897}
   m_Layer: 0
   m_Name: knowledge
-  m_TagString: Bubble
+  m_TagString: KnowledgeBubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

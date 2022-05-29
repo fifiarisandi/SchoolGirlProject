@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Bubble
+  - RandomBubble
+  - KnowledgeBubble
   layers:
   - Default
   - TransparentFX
