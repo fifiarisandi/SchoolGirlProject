@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUp : MonoBehaviour
+public class Remove : MonoBehaviour
 {
     private Inventory inventory;
-    public GameObject itemEarned;
+
 
     // Start is called before the first frame update
     void Start()
@@ -16,16 +16,16 @@ public class PickUp : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
 
         if (other.CompareTag("Player")) {
-            
+
             for (int i = 0; i < inventory.slots.Length; i++) {
-                 if (inventory.isFull[i] == false) {
-                     //item can be added
-                     inventory.isFull[i] = true;
-                     Instantiate(itemEarned, inventory.slots[i].transform, false);
+                 if (inventory.isFull[i] == true) {
+                     //item can be deleted
+                     Destroy(inventory.slots[i].transform.GetChild(i+1).gameObject);
+                     inventory.isFull[i] = false;
                      Destroy(gameObject);
                      break;
                  }
-             }
+             } 
         }
 
     }
