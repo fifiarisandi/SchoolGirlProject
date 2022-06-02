@@ -98,37 +98,6 @@ public class PlayerAction : MonoBehaviour
 
     }    
 
-    // private void OnTriggerEnter2D(Collider2D collision) {
 
-        // if (collision.CompareTag(KBUBBLE_TAG)) { 
-
-        //     for (int i = 0; i < inventory.slots.Length; i++)
-        //     {
-        //         if (inventory.isFull[i] == false){
-        //             //item can be added
-        //             inventory.isFull[i] = true;
-        //             Instantiate(itemEarned, inventory.slots[i].transform, false);
-        //             Destroy(collision.gameObject);
-        //             break;
-        //         }
-        //     }
-
-            //if (knowledgeEarned < 10 && knowledgeEarned >= 0) {
-            //    knowledgeEarned ++;
-            //    Debug.Log("Knowledge is increasing! " + knowledgeEarned);
-            //}
-            //else {
-            //   Debug.Log("Congrats! You received a mental capacity bonus! " + knowledgeEarned);
-               //game stop, and go to result screen
-
-    //     }
-    //     else if (collision.CompareTag(RBUBBLE_TAG)) {
-    //     if (knowledgeEarned > 0 && knowledgeEarned <= 10) {
-    //             knowledgeEarned --;
-    //             Debug.Log("Knowledge is decreasing! " + knowledgeEarned);
-    //     }
-    //     }
-    //     //Destroy(collision.gameObject);
-    // }       
     
 }

@@ -18,14 +18,16 @@ public class Remove : MonoBehaviour
         if (other.CompareTag("Player")) {
 
             for (int i = 0; i < inventory.slots.Length; i++) {
-                 if (inventory.isFull[i] == true) {
-                     //item can be deleted
-                     Destroy(inventory.slots[i].transform.GetChild(i).gameObject);
-                     inventory.isFull[i] = false;
-                     Destroy(gameObject);
-                     break;
-                 }
-             } 
+                if (inventory.isFull[i] == true) {
+                    //item can be deleted
+                    Destroy(inventory.slots[i].transform.GetChild(i).gameObject);
+                    inventory.isFull[i] = false;
+                    Destroy(gameObject);
+                    break;
+                }
+            }
+
+ 
         }
 
     }
