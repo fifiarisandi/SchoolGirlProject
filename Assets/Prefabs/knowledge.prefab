@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7739474488245385623}
   - component: {fileID: 2348364124424210920}
   - component: {fileID: 6049779100357647897}
+  - component: {fileID: 8309941896851959235}
   m_Layer: 0
   m_Name: knowledge
   m_TagString: KnowledgeBubble
@@ -135,3 +136,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+--- !u!114 &8309941896851959235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8771613224984185328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0185170b680c408c94018a63a39d4d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemEarned: {fileID: 4290170033304318114, guid: 97cd2ca137cc34e8cbb4bdd63e9280d6, type: 3}

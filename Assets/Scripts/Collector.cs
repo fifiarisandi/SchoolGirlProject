@@ -6,7 +6,7 @@ public class Collector : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision) 
     {
-        if (collision.CompareTag("Bubble") || (collision.CompareTag("Player"))) {
+        if (collision.CompareTag("KnowledgeBubble") || collision.CompareTag("RandomBubble") || (collision.CompareTag("Player"))) {
             Destroy(collision.gameObject);
         }
 

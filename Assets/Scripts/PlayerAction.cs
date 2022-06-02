@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAction : MonoBehaviour
 {
@@ -15,8 +16,12 @@ public class PlayerAction : MonoBehaviour
     private SpriteRenderer sr;
     private bool isontheGround = true;
     private string GROUND_TAG = "Ground";
-    private string KBUBBLE_TAG = "KnowledgeBubble";
-    private string RBUBBLE_TAG = "RandomBubble";
+    // private string KBUBBLE_TAG = "KnowledgeBubble";
+    // private string RBUBBLE_TAG = "RandomBubble";
+
+    // private Inventory inventory;
+    // public GameObject itemEarned;
+
 
     //private SpriteRenderer otherSprite;
 
@@ -28,7 +33,8 @@ public class PlayerAction : MonoBehaviour
         theBody = GetComponent<Rigidbody2D>();
         anime = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        knowledgeEarned = 0;
+        // inventory = GetComponent<Inventory>();
+        // itemEarned = GameObject.FindGameObjectWithTag(KBUBBLE_TAG);
     }
 
     // Start is called before the first frame update
@@ -90,27 +96,39 @@ public class PlayerAction : MonoBehaviour
         if (collision.gameObject.CompareTag(GROUND_TAG)) 
             isontheGround = true;
 
-    }
+    }    
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    // private void OnTriggerEnter2D(Collider2D collision) {
 
-        if (collision.CompareTag(KBUBBLE_TAG)) { 
-            if (knowledgeEarned < 10 && knowledgeEarned >= 0) {
-                knowledgeEarned ++;
-                Debug.Log("Knowledge is increasing! " + knowledgeEarned);
-            }
-            else {
-               Debug.Log("Congrats! You received a mental capacity bonus! " + knowledgeEarned);
+        // if (collision.CompareTag(KBUBBLE_TAG)) { 
+
+        //     for (int i = 0; i < inventory.slots.Length; i++)
+        //     {
+        //         if (inventory.isFull[i] == false){
+        //             //item can be added
+        //             inventory.isFull[i] = true;
+        //             Instantiate(itemEarned, inventory.slots[i].transform, false);
+        //             Destroy(collision.gameObject);
+        //             break;
+        //         }
+        //     }
+
+            //if (knowledgeEarned < 10 && knowledgeEarned >= 0) {
+            //    knowledgeEarned ++;
+            //    Debug.Log("Knowledge is increasing! " + knowledgeEarned);
+            //}
+            //else {
+            //   Debug.Log("Congrats! You received a mental capacity bonus! " + knowledgeEarned);
                //game stop, and go to result screen
-            }
-        }
-        else if (collision.CompareTag(RBUBBLE_TAG)) {
-        if (knowledgeEarned > 0 && knowledgeEarned <= 10) {
-                knowledgeEarned --;
-                Debug.Log("Knowledge is decreasing! " + knowledgeEarned);
-        }
-        }
-        Destroy(collision.gameObject);
-    }       
+
+    //     }
+    //     else if (collision.CompareTag(RBUBBLE_TAG)) {
+    //     if (knowledgeEarned > 0 && knowledgeEarned <= 10) {
+    //             knowledgeEarned --;
+    //             Debug.Log("Knowledge is decreasing! " + knowledgeEarned);
+    //     }
+    //     }
+    //     //Destroy(collision.gameObject);
+    // }       
     
 }
