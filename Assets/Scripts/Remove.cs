@@ -20,7 +20,7 @@ public class Remove : MonoBehaviour
             for (int i = 0; i < inventory.slots.Length; i++) {
                  if (inventory.isFull[i] == true) {
                      //item can be deleted
-                     Destroy(inventory.slots[i].transform.GetChild(i+1).gameObject);
+                     Destroy(inventory.slots[i].transform.GetChild(i).gameObject);
                      inventory.isFull[i] = false;
                      Destroy(gameObject);
                      break;
