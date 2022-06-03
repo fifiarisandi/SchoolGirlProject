@@ -22,9 +22,10 @@ public class Remove : MonoBehaviour
                     //item can be deleted
                     Destroy(inventory.slots[i].transform.GetChild(0).gameObject);
                     inventory.isFull[i] = false;
+                    Destroy(gameObject);
                     break;
                 } 
-                Destroy(gameObject);
+                    Destroy(gameObject);
             }
  
         }
