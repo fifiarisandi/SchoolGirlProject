@@ -17,16 +17,15 @@ public class Remove : MonoBehaviour
 
         if (other.CompareTag("Player")) {
 
-            for (int i = 0; i < inventory.slots.Length; i++) {
+            for (int i = (inventory.slots.Length-1); i >= 0; i--) {
                 if (inventory.isFull[i] == true) {
                     //item can be deleted
-                    Destroy(inventory.slots[i].transform.GetChild(i).gameObject);
+                    Destroy(inventory.slots[i].transform.GetChild(0).gameObject);
                     inventory.isFull[i] = false;
-                    Destroy(gameObject);
                     break;
-                }
+                } 
+                Destroy(gameObject);
             }
-
  
         }
 
