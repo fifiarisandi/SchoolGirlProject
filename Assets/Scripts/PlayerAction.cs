@@ -18,11 +18,6 @@ public class PlayerAction : MonoBehaviour
     private string GROUND_TAG = "Ground";
     // private string KBUBBLE_TAG = "KnowledgeBubble";
     // private string RBUBBLE_TAG = "RandomBubble";
-
-    // private Inventory inventory;
-    // public GameObject itemEarned;
-
-
     //private SpriteRenderer otherSprite;
 
     private int knowledgeEarned;
@@ -35,12 +30,6 @@ public class PlayerAction : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         // inventory = GetComponent<Inventory>();
         // itemEarned = GameObject.FindGameObjectWithTag(KBUBBLE_TAG);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame

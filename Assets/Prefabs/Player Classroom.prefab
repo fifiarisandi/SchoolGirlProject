@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1455683792442946122}
   - component: {fileID: 7735119083015933572}
   - component: {fileID: 8255517472394300852}
+  - component: {fileID: 7470007350277516853}
   m_Layer: 0
   m_Name: Player Classroom
   m_TagString: Player
@@ -141,7 +142,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8255517472394300852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,3 +157,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 10
   jumpForce: 11
+--- !u!114 &7470007350277516853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7470007349657804338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e561d4c2a6674127a7327f032f7c526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFull: 00000000
+  slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
