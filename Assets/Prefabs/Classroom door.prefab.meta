@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/Classroom door.prefab.meta
 guid: b9373a569fb024eb2bd8cb54cbec276e
 PrefabImporter:
+========
+guid: f0d436ce6ae7b064f8c3fda7575401b8
+DefaultImporter:
+>>>>>>>> V2:Assets/Scenes/StartScreen.unity.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
