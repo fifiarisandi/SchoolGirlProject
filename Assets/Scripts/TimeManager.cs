@@ -6,7 +6,7 @@ public class TimeManager : MonoBehaviour
 {
     public const int hoursInDay = 24;
     public const int minutesInHour = 60;
-    public float dayDuration = 600f;
+    float dayDuration = 1200f;
     //public const float startHour = 8;
     //public const float startMinute = 45;
     float totalTime = 0;
@@ -22,7 +22,7 @@ public class TimeManager : MonoBehaviour
     }
 
     public float GetHour() {
-        return  (currentTime * hoursInDay / dayDuration);
+        return  ((currentTime * hoursInDay / dayDuration) + 9);
     }
 
     public float GetMinutes() {
