@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class DigitalClock : MonoBehaviour
 {
-    TimeManager tm;
+    GameManager tm;
     Text display;
 
     // Start is called before the first frame update
     void Start()
     {
-        tm = FindObjectOfType<TimeManager>();
+        tm = FindObjectOfType<GameManager>();
         display = GetComponent<Text>();
     }
 
