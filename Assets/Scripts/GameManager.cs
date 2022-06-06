@@ -25,11 +25,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void OnEnable() {
+       LibraryScoreManager.gameStatusEvent += LibraryGameListener;
+    }
+
+    void OnDisable() {
+        LibraryScoreManager.gameStatusEvent -= LibraryGameListener;
+        
+    }
+
     void Update()
     {
         //timekeeper 
         totalTime += Time.deltaTime;
         currentTime = totalTime % dayDuration;
+
+    }
+
+    void LibraryGameListener() {
 
     }
 
