@@ -1,0 +1,486 @@
+fileFormatVersion: 2
+guid: 0ab0b3c697bedae48b150e6575072185
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: NPC3 (1)_0
+  - first:
+      213: 21300002
+    second: NPC3 (1)_1
+  - first:
+      213: 21300004
+    second: NPC3 (1)_2
+  - first:
+      213: 21300006
+    second: NPC3 (1)_3
+  - first:
+      213: 21300008
+    second: NPC3 (1)_4
+  - first:
+      213: 21300010
+    second: NPC3 (1)_5
+  - first:
+      213: 21300012
+    second: NPC3 (1)_6
+  - first:
+      213: 21300014
+    second: NPC3 (1)_7
+  - first:
+      213: 21300016
+    second: NPC3 (1)_8
+  - first:
+      213: 21300018
+    second: NPC3 (1)_9
+  - first:
+      213: 21300020
+    second: NPC3 (1)_10
+  - first:
+      213: 21300022
+    second: NPC3 (1)_11
+  - first:
+      213: 21300024
+    second: NPC3 (1)_12
+  - first:
+      213: 21300026
+    second: NPC3 (1)_13
+  - first:
+      213: 8092950604599720538
+    second: Maria front1
+  - first:
+      213: -4582379388693629993
+    second: Maria frontwalk1
+  - first:
+      213: 2758911371160315596
+    second: Maria front2
+  - first:
+      213: -3221395737961417882
+    second: Maria frontwalk2
+  - first:
+      213: 4517192833854514540
+    second: Maria back1
+  - first:
+      213: -8078831293962021422
+    second: Maria backwalk1
+  - first:
+      213: -6499725334327983887
+    second: Maria back2
+  - first:
+      213: -7810707130393468736
+    second: Maria backwalk2
+  - first:
+      213: -4881643179185963708
+    second: Maria leftwalk1
+  - first:
+      213: -5795927295136704038
+    second: Maria left
+  - first:
+      213: -6760307293621995737
+    second: Maria leftwalk2
+  - first:
+      213: 7433485516786678184
+    second: Maria rightwalk1
+  - first:
+      213: 758870478841811627
+    second: Maria right
+  - first:
+      213: -4532451077063745984
+    second: Maria rightwalk2
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Maria front1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 798
+        width: 116
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5af2f352bfef4070800000000000000
+      internalID: 8092950604599720538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maria frontwalk1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 802
+        width: 120
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d338d6793e1860c0800000000000000
+      internalID: -4582379388693629993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maria front2
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 798
+        width: 116
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6ebc4564f994620800000000000000
+      internalID: 2758911371160315596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maria frontwalk2
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 802
+        width: 120
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6633addd4ad4b43d0800000000000000
+      internalID: -3221395737961417882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maria back1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 542
+        width: 112
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65a6d303fa40be30800000000000000
+      internalID: 4517192833854514540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maria backwalk1
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 546
+        width: 112
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d5951bddb932ef80800000000000000
+      internalID: -8078831293962021422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maria back2
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 542
+        width: 112
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f006c5de365cc5a0800000000000000
+      internalID: -6499725334327983887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maria backwalk2
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 546
+        width: 112
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c069407f3bca9390800000000000000
+      internalID: -7810707130393468736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maria leftwalk1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 294
+        width: 116
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d7960846be04cb0800000000000000
+      internalID: -4881643179185963708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maria left
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 298
+        width: 116
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9d26d45dab09fa0800000000000000
+      internalID: -5795927295136704038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maria leftwalk2
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 294
+        width: 116
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727bd2785509e22a0800000000000000
+      internalID: -6760307293621995737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maria rightwalk1
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 294
+        width: 116
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9b41771bb092760800000000000000
+      internalID: 7433485516786678184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maria right
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 42
+        width: 116
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba295e90eac088a00800000000000000
+      internalID: 758870478841811627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maria rightwalk2
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 38
+        width: 116
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e57c562cf7911c0800000000000000
+      internalID: -4532451077063745984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 90216b0fa51624446a14217f00f3c8eb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
