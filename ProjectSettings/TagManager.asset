@@ -8,6 +8,7 @@ TagManager:
   - RandomBubble
   - KnowledgeBubble
   - Floor
+  - Booster
   layers:
   - Default
   - TransparentFX

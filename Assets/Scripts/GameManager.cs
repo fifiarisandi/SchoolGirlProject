@@ -24,11 +24,10 @@ public class GameManager : MonoBehaviour
     public float schedule5 = 16;
 
     //energyBar
-    public Image energyBar;
+    //public Image energyBar;
     public float energyAmount = 100;
-
-
     
+   
     private void Awake() {
         if (instance == null) {
             instance = this;
@@ -45,7 +44,6 @@ public class GameManager : MonoBehaviour
 
     void OnDisable() {
         LibraryScoreManager.gameStatusEvent -= LibraryGameListener;
-        
     }
 
     void Update()
@@ -61,9 +59,7 @@ public class GameManager : MonoBehaviour
         if (energyAmount <= 0) {
             //GameOver scene
             Debug.Log("You are running out of energy!");
-
         }
-
     }
 
     public float TakeDamage(float damage) {
@@ -83,6 +79,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("CongratsLibrary");
 
     }
+
 
     public float GetHour() {
         return  ((currentTime * hoursInDay / dayDuration) + 9);

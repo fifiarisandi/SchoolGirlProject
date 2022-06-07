@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,15 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class BoosterPage : MonoBehaviour
 {
+    GameManager gm;
 
-    public void BoosterCoolBtn() {
+    private void Start() {
+        gm = FindObjectOfType<GameManager>();
+    }
 
+     public void BoosterCoolBtn() {
         SceneManager.LoadScene("TheHallway");
-        
         Debug.Log("Button clicked!");
-        
+        //gm.PutEnergyBoosteronScene();   
 
     }
+
 
 
 
