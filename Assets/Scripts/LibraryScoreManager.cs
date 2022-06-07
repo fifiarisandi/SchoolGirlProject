@@ -11,15 +11,14 @@ public class LibraryScoreManager : MonoBehaviour
     private Inventory inventory;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
-    void CheckBubbles() {
-        if (inventory.isFull[4] == true) {
+    public void CheckBubbles() {
+        if (inventory.isFull[3] == true) {
             if (gameStatusEvent != null) {
                 gameStatusEvent();
             }
@@ -30,6 +29,6 @@ public class LibraryScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Invoke("CheckBubbles", 5f);
     }
 }

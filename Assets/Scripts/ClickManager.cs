@@ -5,6 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class ClickManager : MonoBehaviour
 {
+    GameManager gm;
+    float energyChange;
+    float energyLeft;
+    // public delegate void clickDoorBarModifierDelegate();
+    // public static event clickDoorBarModifierDelegate doorBarModifierEvent;
+
+    void Start() {
+        gm = FindObjectOfType<GameManager>();
+    }
+
+    // public void ModifyBar() {
+
+    // }
 
     // Update is called once per frame
     void Update()
@@ -18,6 +31,8 @@ public class ClickManager : MonoBehaviour
             if (hit.collider != null) {
 
                 if (hit.collider.gameObject.name == "Library door") {
+                    energyChange = 20;
+                    gm.TakeDamage(energyChange);
                     SceneManager.LoadScene ("Library");
                 } 
                 // else if (hit.collider.gameObject.name == "Classroom door") {

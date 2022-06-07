@@ -1,18 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    //timekeeper vars
+    //timeKeeper
     public const int hoursInDay = 24;
     public const int minutesInHour = 60;
     float dayDuration = 1200f;
     float totalTime = 0;
     float currentTime = 0;
+
+    //schedule
+    float schedule1 = 9;
+    float schedule2 = 11;
+    float schedule3 = 13;
+    float schedule4 = 14;
+    float schedule5 = 16;
+
+    //energyBar
+    public Image energyBar;
+    public float energyAmount = 100;
+
 
     
     private void Awake() {
@@ -36,13 +50,37 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        //timekeeper 
+        //timeKeeper 
         totalTime += Time.deltaTime;
         currentTime = totalTime % dayDuration;
 
+        //energyBar
+        if (energyAmount == 20) {
+            Debug.Log("You are almost running out of energy. It's time for a booster!");
+        }
+        if (energyAmount <= 0) {
+            //GameOver scene
+            Debug.Log("You are running out of energy!");
+
+        }
+
+    }
+
+    public float TakeDamage(float damage) {
+        energyAmount -= damage;
+        return energyAmount;
+
+    }
+
+    public float Healing(float healPoint) {
+        energyAmount += healPoint;
+        energyAmount = Mathf.Clamp(energyAmount, 0, 100);
+        return energyAmount;
     }
 
     void LibraryGameListener() {
+        //booster scene
+        SceneManager.LoadScene("TheHallway");
 
     }
 
