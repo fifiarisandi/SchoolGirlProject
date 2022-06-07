@@ -17,11 +17,11 @@ public class GameManager : MonoBehaviour
     float currentTime = 0;
 
     //schedule
-    float schedule1 = 9;
-    float schedule2 = 11;
-    float schedule3 = 13;
-    float schedule4 = 14;
-    float schedule5 = 16;
+    public float schedule1 = 9.15f;
+    public float schedule2 = 11;
+    public float schedule3 = 13;
+    public float schedule4 = 14;
+    public float schedule5 = 16;
 
     //energyBar
     public Image energyBar;
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
 
     void LibraryGameListener() {
         //booster scene
-        SceneManager.LoadScene("TheHallway");
+        SceneManager.LoadScene("CongratsLibrary");
 
     }
 
@@ -96,8 +96,6 @@ public class GameManager : MonoBehaviour
         
         return Mathf.FloorToInt(GetHour()).ToString("00") + ":" + Mathf.FloorToInt(GetMinutes()).ToString("00");
     }
-
-
     
     
     
