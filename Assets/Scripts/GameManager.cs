@@ -12,23 +12,19 @@ public class GameManager : MonoBehaviour
     //timeKeeper
     public const int hoursInDay = 24;
     public const int minutesInHour = 60;
-    float dayDuration = 1200f;
+    float dayDuration = 600f;
     float totalTime = 0;
     float currentTime = 0;
 
-    //schedule
-    public float schedule1 = 9.15f;
-    public float schedule2 = 11;
-    public float schedule3 = 13;
-    public float schedule4 = 14;
-    public float schedule5 = 16;
-
-    //energyBar
-    //public Image energyBar;
+    //statsBar
     public float amountLeft = 100;
+    public float boosterEarned; 
+
+    //GameOver
+    string timeNow;
+    Boolean isGameOver;
    
     
-   
     private void Awake() {
         if (instance == null) {
             instance = this;
@@ -53,14 +49,13 @@ public class GameManager : MonoBehaviour
         totalTime += Time.deltaTime;
         currentTime = totalTime % dayDuration;
 
-        //energyBar
-        if (amountLeft == 20) {
-            Debug.Log("You are almost running out of energy. It's time for a booster!");
-        }
-        if (amountLeft <= 0) {
-            //GameOver scene
-            Debug.Log("You are running out of energy!");
-        }
+        //checkBar
+        // if (amountLeft <= 50) {
+        //     Debug.Log("You are almost running out of energy. Make better choices! ");
+        // }
+
+        //GameOver
+        CheckGameOver();
     }
 
     public float TakeDamage(float damage) {
@@ -77,10 +72,23 @@ public class GameManager : MonoBehaviour
 
     void LibraryGameListener() {
         //booster scene
+        boosterEarned = 10;
+        Healing(boosterEarned);
         SceneManager.LoadScene("CongratsLibrary");
 
     }
 
+    //Gameover
+    public void CheckGameOver () {
+        timeNow = Clock24H();
+        if (timeNow == "20:00") {
+            isGameOver = true;
+            SceneManager.LoadScene("GameOver");
+        }
+        if (amountLeft <= 0) {
+            SceneManager.LoadScene("GameOver");
+        }
+    }
 
     public float GetHour() {
         return  ((currentTime * hoursInDay / dayDuration) + 9);

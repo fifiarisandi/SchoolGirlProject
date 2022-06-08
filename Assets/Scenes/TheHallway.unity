@@ -158,6 +158,7 @@ MonoBehaviour:
   schedule4: 14
   schedule5: 16
   amountLeft: 100
+  boosterEarned: 0
 --- !u!4 &25775663
 Transform:
   m_ObjectHideFlags: 0

@@ -23,4 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CongratsLibrary.unity
     guid: 68ee42c7f9c6f40da9acbc6d6c3eaaa8
+  - enabled: 1
+    path: Assets/Scenes/Classroom.unity
+    guid: 0cc095fec772f4368a39ba5426097ed7
+  - enabled: 1
+    path: Assets/Scenes/Cafeteria.unity
+    guid: e6e0622a24cc94e1ab76c4e359de86d4
+  - enabled: 1
+    path: Assets/Scenes/Gym.unity
+    guid: 29b587041a93d49c8aab15acd94a6215
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 47c42dc128e9f47c09834c6eb8139f63
   m_configObjects: {}

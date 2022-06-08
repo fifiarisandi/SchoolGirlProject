@@ -46,7 +46,6 @@ public class PlayerAction : MonoBehaviour
 
     }
 
-
     void PlayerMoveKeyboard() 
     {
         movementX = Input.GetAxisRaw("Horizontal");

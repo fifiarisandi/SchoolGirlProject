@@ -20,8 +20,13 @@ public class LibraryScoreManager : MonoBehaviour
     public void CheckBubbles() {
         if (inventory.isFull[3] == true) {
             if (gameStatusEvent != null) {
+                
                 gameStatusEvent();
             }
+            // else {
+            //     gameStatusEvent();
+            // }
+        //else kalo ga dapet ga dapet 4 bubbles and uda abis, lgsg balik ke hallway
         }
     }
 
