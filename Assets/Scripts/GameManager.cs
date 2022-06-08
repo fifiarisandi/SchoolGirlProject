@@ -50,9 +50,9 @@ public class GameManager : MonoBehaviour
         currentTime = totalTime % dayDuration;
 
         //checkBar
-        // if (amountLeft <= 50) {
-        //     Debug.Log("You are almost running out of energy. Make better choices! ");
-        // }
+        if (amountLeft <= 40) {
+            Debug.Log("You are almost running out of energy. Make better choices! ");
+        }
 
         //GameOver
         CheckGameOver();
@@ -88,6 +88,14 @@ public class GameManager : MonoBehaviour
         if (amountLeft <= 0) {
             SceneManager.LoadScene("GameOver");
         }
+        else {
+            Restarting();
+
+        }
+    }
+
+    public void Restarting () {
+        SceneManager.LoadScene("StartScreen");
     }
 
     public float GetHour() {
