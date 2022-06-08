@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class ClickManager : MonoBehaviour
 {
     GameManager gm;
-    float energyChange;
+    float barChange;
+    //float moodChange;
     float timeEnter;
     
 
@@ -29,15 +30,22 @@ public class ClickManager : MonoBehaviour
                     //timeEnter =gm. (get the timestamp)
                     
                     if (timeEnter <= gm.schedule1) {
-                        energyChange = 20;
+                        //ontime
+                        barChange = 40;
+                        //moodChange = 40;
                     }
                     else if (timeEnter > gm.schedule1 && timeEnter <= (gm.schedule1 + 0.15)) {
-                        energyChange = 30;
+                        //lateabit
+                        barChange = 50;
+                        //moodChange = 40;
                     } 
                     else {
-                        energyChange = 50;
+                        //skipschedule
+                        barChange = 50;
+                        //moodChange = 50;
                     }
-                    gm.TakeDamage(energyChange);
+                    gm.TakeDamage(barChange);
+                   // gm.TakeDamage(moodChange);
                     SceneManager.LoadScene ("Library");
                 } 
                 // else if (hit.collider.gameObject.name == "Classroom door") {

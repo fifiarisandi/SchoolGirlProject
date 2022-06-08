@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DisplayEnergy : MonoBehaviour
+public class DisplayMood : MonoBehaviour
 {
     GameManager gm;
-    Image energyBar;
+    Image moodBar;
 
     // Start is called before the first frame update
     void Start()
     {
         gm = FindObjectOfType<GameManager>();
-        energyBar = GetComponent<Image>();
+        moodBar = GetComponent<Image>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        energyBar.fillAmount = gm.amountLeft / 100;
+        moodBar.fillAmount = gm.amountLeft / 100;
+        
     }
-
 }

@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
 
     //energyBar
     //public Image energyBar;
-    public float energyAmount = 100;
+    public float amountLeft = 100;
+   
     
    
     private void Awake() {
@@ -53,25 +54,25 @@ public class GameManager : MonoBehaviour
         currentTime = totalTime % dayDuration;
 
         //energyBar
-        if (energyAmount == 20) {
+        if (amountLeft == 20) {
             Debug.Log("You are almost running out of energy. It's time for a booster!");
         }
-        if (energyAmount <= 0) {
+        if (amountLeft <= 0) {
             //GameOver scene
             Debug.Log("You are running out of energy!");
         }
     }
 
     public float TakeDamage(float damage) {
-        energyAmount -= damage;
-        return energyAmount;
+        amountLeft -= damage;
+        return amountLeft;
 
     }
 
     public float Healing(float healPoint) {
-        energyAmount += healPoint;
-        energyAmount = Mathf.Clamp(energyAmount, 0, 100);
-        return energyAmount;
+        amountLeft += healPoint;
+        amountLeft = Mathf.Clamp(amountLeft, 0, 100);
+        return amountLeft;
     }
 
     void LibraryGameListener() {
