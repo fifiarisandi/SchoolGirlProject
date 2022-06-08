@@ -15,7 +15,7 @@ public class BoosterPage : MonoBehaviour
 
      public void BoosterCoolBtn() {
         SceneManager.LoadScene("TheHallway");
-        Debug.Log("Button clicked!");
+        //Debug.Log("Button clicked!");
         //gm.PutEnergyBoosteronScene();   
 
     }

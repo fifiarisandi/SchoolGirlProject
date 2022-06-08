@@ -3,20 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BoosterManager : MonoBehaviour
-{
-    Image boosterImg;
-    GameManager gm;
-    float boosterValue = 10;
+// public class BoosterManager : MonoBehaviour
+// {
+//     Image boosterImg;
+//     GameManager gm;
+//     Button useBoosterBtn;
+//     float boosterValue = 10;
 
-   private void Awake() {
-        boosterImg = GameObject.FindGameObjectWithTag("Booster").GetComponent<Image>();
-        boosterImg.sprite = Resources.Load<Sprite>("EnergyBooster");
+//     private void Start() {
+//         gm = FindObjectOfType<GameManager>();
+//         Image 
+//         useBoosterBtn = 
+//     }
 
+//     private void Update() {
+//         boosterImg = GameObject.FindGameObjectWithTag("Booster").GetComponent<Image>();
+//         boosterImg.sprite = Resources.Load<Sprite>("EnergyBooster");
+//     }
     
-    void useBooster() {
-        gm.Healing(boosterValue);
-    }
+//     void useBooster() {
+//         gm.Healing(boosterValue);
+//         boosterImg.sprite = Resources.Load<Sprite>("Square");
+//     }
 
         // if (boosterImgArray == null) {
         //     boosterImgArray = GameObject.FindGameObjectWithTag("Booster");
@@ -26,5 +34,5 @@ public class BoosterManager : MonoBehaviour
         //         boosterImg.sprite = Resources.Load<Sprite>("EnergyBooster");
         //     }    
         // }
-   }
-}
+   
+// }

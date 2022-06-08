@@ -319,7 +319,6 @@ GameObject:
   - component: {fileID: 123585758}
   - component: {fileID: 123585757}
   - component: {fileID: 123585756}
-  - component: {fileID: 123585759}
   m_Layer: 5
   m_Name: Booster (1)
   m_TagString: Booster
@@ -389,7 +388,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 123585757}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 123585757}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+        m_MethodName: set_overrideSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7482667652216324306, guid: fc140deece9a445609b696d565bdb973, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &123585757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,18 +439,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123585754}
   m_CullTransparentMesh: 1
---- !u!114 &123585759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123585754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6b2393625f844ebaeb6a918e67a338, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &198159644
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +779,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 537284702}
-  - component: {fileID: 537284701}
   m_Layer: 0
   m_Name: Booster Manager
   m_TagString: Untagged
@@ -788,18 +786,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &537284701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537284700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f6b2393625f844ebaeb6a918e67a338, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &537284702
 Transform:
   m_ObjectHideFlags: 0
