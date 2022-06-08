@@ -347,9 +347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "We make our choices, but in the end our choices make us. \n\nToday is
-    the first day of the rest of our lives, let's make the best out of it. Let's
-    make good choices!"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -517,8 +515,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 494393960}
   lines:
-  - Hello World
-  - This is a beautiful day
+  - We make our choices, but in the end our choices make us.   Today is the first
+    day of the rest of our lives, let's make the best out of it. Let's make good
+    choices!
+  - 
   textSpeed: 0.09
 --- !u!1 &1705607048
 GameObject:
