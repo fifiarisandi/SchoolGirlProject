@@ -17,12 +17,15 @@ public class GameManager : MonoBehaviour
     float currentTime = 0;
 
     //statsBar
-    public float amountLeft = 100;
+    public float amountLeftEnergy = 100;
+    public float amountLeftMood = 100;
     public float boosterEarned; 
 
     //GameOver
     string timeNow;
     Boolean isGameOver;
+    int checkHour;
+    int checkMin;
    
     
     private void Awake() {
@@ -50,30 +53,45 @@ public class GameManager : MonoBehaviour
         currentTime = totalTime % dayDuration;
 
         //checkBar
-        // if (amountLeft <= 50) {
-        //     Debug.Log("You are almost running out of energy. Make better choices! ");
+        // if (amountLeftEnergy <= 50) {
+        //      Debug.Log("You are almost running out of energy. Make better choices!");
+        // }
+        // else if(amountLeftMood <=60) {
+        //     Debug.Log("You are almost running out of mood. Make better choices!");
         // }
 
         //GameOver
         CheckGameOver();
     }
 
-    public float TakeDamage(float damage) {
-        amountLeft -= damage;
-        return amountLeft;
+    public float TakeDamageEnergy(float damage) {
+        amountLeftEnergy -= damage;
+        return amountLeftEnergy;
 
     }
 
-    public float Healing(float healPoint) {
-        amountLeft += healPoint;
-        amountLeft = Mathf.Clamp(amountLeft, 0, 100);
-        return amountLeft;
+    public float HealingEnergy(float healPoint) {
+        amountLeftEnergy += healPoint;
+        amountLeftEnergy = Mathf.Clamp(amountLeftEnergy, 0, 100);
+        return amountLeftEnergy;
+    }
+
+     public float TakeDamageMood(float damage) {
+        amountLeftMood -= damage;
+        return amountLeftMood;
+
+    }
+
+    public float HealingMood(float healPoint) {
+        amountLeftMood += healPoint;
+        amountLeftMood = Mathf.Clamp(amountLeftMood, 0, 100);
+        return amountLeftMood;
     }
 
     void LibraryGameListener() {
         //booster scene
-        boosterEarned = 10;
-        Healing(boosterEarned);
+        //boosterEarned = 10;
+        //HealingEnergy(boosterEarned);
         SceneManager.LoadScene("CongratsLibrary");
 
     }
@@ -81,12 +99,19 @@ public class GameManager : MonoBehaviour
     //Gameover
     public void CheckGameOver () {
         timeNow = Clock24H();
-        if (timeNow == "20:00") {
+        checkHour = Mathf.FloorToInt(GetHour());
+        checkMin = Mathf.FloorToInt(GetMinutes());
+        
+        if (timeNow == "19:00") {
             isGameOver = true;
             SceneManager.LoadScene("GameOver");
         }
-        if (amountLeft <= 0) {
+        else if (amountLeftEnergy <= 0 || amountLeftMood <= 0) {
             SceneManager.LoadScene("GameOver");
+        }
+        else if (checkHour != 9 && checkMin != 0) { 
+            // add condition belum pernah play
+             SceneManager.LoadScene("CongratsLibrary");
         }
     }
 
@@ -101,6 +126,24 @@ public class GameManager : MonoBehaviour
     public string Clock24H() {
         
         return Mathf.FloorToInt(GetHour()).ToString("00") + ":" + Mathf.FloorToInt(GetMinutes()).ToString("00");
+    }
+
+    public string EnergyLeft() {
+        return Mathf.FloorToInt(amountLeftEnergy).ToString();
+    }
+
+    public string MoodLeft() {
+        return Mathf.FloorToInt(amountLeftMood).ToString();
+    }
+
+    public string Commentary() {
+        
+        if (amountLeftEnergy <=30 || amountLeftMood <= 30) {
+            return ("You made it, but it could've been better! Make better choices next time!");
+        }
+        else {
+            return ("You made good choices!");
+        }
     }
     
     

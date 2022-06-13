@@ -19,7 +19,7 @@ public class DisplayMood : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moodBar.fillAmount = gm.amountLeft / 100;
+        moodBar.fillAmount = gm.amountLeftMood / 100;
         
     }
 }

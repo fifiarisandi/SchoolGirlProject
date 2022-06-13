@@ -3,23 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DisplayEnergy : MonoBehaviour
+public class EnergyLeftDisplay : MonoBehaviour
 {
     GameManager gm;
-    Image energyBar;
+    Text display;
 
     // Start is called before the first frame update
     void Start()
     {
         gm = FindObjectOfType<GameManager>();
-        energyBar = GetComponent<Image>();
-        
+        display = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        energyBar.fillAmount = gm.amountLeftEnergy / 100;
+        display.text = gm.EnergyLeft(); 
     }
-
 }
