@@ -630,9 +630,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 894849884}
+        m_TargetAssemblyTypeName: ScheduleController, Assembly-CSharp
+        m_MethodName: BacktoHallway
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -858,6 +858,8 @@ MonoBehaviour:
     will cost you your energy and mood. '
   - Studying will boost your knowledge, but it also requires lots of energy and drains
     your mood.
+  - Eating and exercising will give you improve your energy and mood, but doing it
+    at the wrong time will not give you any benefits.
   - 'In each activity, you will face the good and bad choices. Maintain your energy
     and mood level well by staying focus and making the right choices. '
   - Making the right choices will earn you a booster.
