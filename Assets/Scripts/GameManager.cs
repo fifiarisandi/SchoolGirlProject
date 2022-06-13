@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
         //booster scene
         //boosterEarned = 10;
         //HealingEnergy(boosterEarned);
-        SceneManager.LoadScene("CongratsLibrary");
+        SceneManager.LoadScene("CongratsBooster");
 
     }
 
@@ -109,10 +109,10 @@ public class GameManager : MonoBehaviour
         else if (amountLeftEnergy <= 0 || amountLeftMood <= 0) {
             SceneManager.LoadScene("GameOver");
         }
-        else if (checkHour != 9 && checkMin != 0) { 
-            // add condition belum pernah play
-             SceneManager.LoadScene("CongratsLibrary");
-        }
+        // else if (checkHour != 9 && checkMin != 0) { 
+        //     // add condition belum pernah play
+        //      SceneManager.LoadScene("CongratsLibrary");
+        // }
     }
 
     public float GetHour() {
