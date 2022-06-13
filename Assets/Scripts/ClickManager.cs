@@ -187,4 +187,10 @@ public class ClickManager : MonoBehaviour
         SceneManager.LoadScene("Schedule");
 
     }
+
+    public void CheckGuideline() {
+        SceneManager.LoadScene("Guideline");
+
+    }
+
 }
