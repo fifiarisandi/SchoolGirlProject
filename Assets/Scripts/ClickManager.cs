@@ -11,9 +11,12 @@ public class ClickManager : MonoBehaviour
     float energyChange;
     float moodChange;
     //float energyChange;
-      float timeEnter;
-      int enterHour;
-      int enterMin;    
+    float timeEnter;
+    int enterHour;
+    int enterMin;   
+
+    //checking Enter
+    int counting;
 
     void Start() {
         gm = FindObjectOfType<GameManager>();
@@ -35,12 +38,14 @@ public class ClickManager : MonoBehaviour
 
                     enterHour = Mathf.FloorToInt(gm.GetHour());
                     enterMin = Mathf.FloorToInt(gm.GetMinutes());
+                    counting = 1;
 
                     //on time 9 to 9.15
                     if (enterHour == 9 ) {
                         if (enterMin >= 0 && enterMin <= 15) {
                             energyChange = 40;
                             moodChange = 30;
+                            gm.CountEnteredOnTime(counting);
                         }
                         //late a bit 9.15 to 9.30
                         else if (enterMin > 15 && enterMin <= 30) {
@@ -60,6 +65,8 @@ public class ClickManager : MonoBehaviour
                     }
                     gm.TakeDamageEnergy(energyChange);
                     gm.TakeDamageMood(moodChange);
+                    //gm.CheckEntered();
+                    gm.CountEntered(counting);
                     SceneManager.LoadScene ("Classroom");
                 } 
                 else if (hit.collider.gameObject.name == "Library door") {
@@ -67,12 +74,14 @@ public class ClickManager : MonoBehaviour
 
                     enterHour = Mathf.FloorToInt(gm.GetHour());
                     enterMin = Mathf.FloorToInt(gm.GetMinutes());
+                    counting = 1;
 
                     //on time 11 to 11.15
                     if (enterHour == 11 ) {
                         if (enterMin >= 0 && enterMin <= 15) {
                             energyChange = 40;
                             moodChange = 30;
+                            gm.CountEnteredOnTime(counting);
                         }
                         //late a bit 11.15 to 11.30
                         else if (enterMin > 15 && enterMin <= 30) {
@@ -92,6 +101,8 @@ public class ClickManager : MonoBehaviour
                     }
                     gm.TakeDamageEnergy(energyChange);
                     gm.TakeDamageMood(moodChange);
+                    //gm.CheckEntered();
+                    gm.CountEntered(counting);
                     SceneManager.LoadScene ("Library");
                 } 
                 else if (hit.collider.gameObject.name == "Cafe door") {
@@ -99,12 +110,14 @@ public class ClickManager : MonoBehaviour
 
                     enterHour = Mathf.FloorToInt(gm.GetHour());
                     enterMin = Mathf.FloorToInt(gm.GetMinutes());
+                    counting = 1;
 
                     //on time 13 to 13.15
                     if (enterHour == 13 ) {
                         if (enterMin >= 0 && enterMin <= 15) {
                             energyChange = 30;
                             moodChange = 20;
+                            gm.CountEnteredOnTime(counting);
                         }
                         //late a bit 13.15 to 13.30
                         else if (enterMin > 15 && enterMin <= 30) {
@@ -124,6 +137,8 @@ public class ClickManager : MonoBehaviour
                     }
                     gm.HealingEnergy(energyChange);
                     gm.HealingMood(moodChange);
+                    //gm.CheckEntered();
+                    gm.CountEntered(counting);
                     SceneManager.LoadScene ("Cafeteria");
                 } 
                   
@@ -132,12 +147,14 @@ public class ClickManager : MonoBehaviour
 
                     enterHour = Mathf.FloorToInt(gm.GetHour());
                     enterMin = Mathf.FloorToInt(gm.GetMinutes());
+                    counting = 1;
 
                     //on time 16 to 16.15
                     if (enterHour == 16 ) {
                         if (enterMin >= 0 && enterMin <= 15) {
                             energyChange = 30;
                             moodChange = 20;
+                            gm.CountEnteredOnTime(counting);
                         }
                         //late a bit 16.15 to 16.30
                         else if (enterMin > 15 && enterMin <= 30) {
@@ -157,6 +174,8 @@ public class ClickManager : MonoBehaviour
                     }
                     gm.HealingEnergy(energyChange);
                     gm.HealingMood(moodChange);
+                    //gm.CheckEntered();
+                    gm.CountEntered(counting);
                     SceneManager.LoadScene ("Gym");
                 }
 

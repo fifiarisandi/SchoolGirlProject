@@ -26,6 +26,15 @@ public class GameManager : MonoBehaviour
     Boolean isGameOver;
     int checkHour;
     int checkMin;
+
+    //Win
+    int classEnteredOnTime = 0;
+    int numClassEnteredOnTime;
+    int classEntered = 0;
+    int numClassEntered;
+    int entry;
+    // Boolean isEntered;
+    // Boolean roomEntered;
    
     
     private void Awake() {
@@ -61,7 +70,10 @@ public class GameManager : MonoBehaviour
         // }
 
         //GameOver
-        CheckGameOver();
+        CheckResult();
+
+        //Win
+        // CheckWin();
     }
 
     public float TakeDamageEnergy(float damage) {
@@ -97,10 +109,13 @@ public class GameManager : MonoBehaviour
     }
 
     //Gameover
-    public void CheckGameOver () {
+    public void CheckResult() {
         timeNow = Clock24H();
         checkHour = Mathf.FloorToInt(GetHour());
         checkMin = Mathf.FloorToInt(GetMinutes());
+        numClassEnteredOnTime = CountEnteredOnTime(entry);
+        numClassEntered = CountEntered(entry);
+        //roomEntered = CheckEntered();
         
         if (timeNow == "19:00") {
             isGameOver = true;
@@ -109,11 +124,44 @@ public class GameManager : MonoBehaviour
         else if (amountLeftEnergy <= 0 || amountLeftMood <= 0) {
             SceneManager.LoadScene("GameOver");
         }
+        else if(numClassEnteredOnTime == 4) {
+            SceneManager.LoadScene("CongratsLibrary");
+        }
+        // else if(amountLeftEnergy > 0 || amountLeftMood > 0) {
+        //     if(numClassEntered != 0) {
+        //         SceneManager.LoadScene("CongratsLibrary");
+        //     }
+        // }
         // else if (checkHour != 9 && checkMin != 0) { 
         //     // add condition belum pernah play
         //      SceneManager.LoadScene("CongratsLibrary");
         // }
     }
+
+    public int CountEnteredOnTime(int counter) {
+        classEnteredOnTime += counter;
+        return classEnteredOnTime;
+    }
+
+    public int CountEntered(int counters) {
+        classEntered += counters;
+        return classEntered;
+    }
+
+    // public Boolean CheckEntered() {
+    //     isEntered = true;
+    //     return isEntered;
+    // }
+
+    // public void CheckWin() {
+    //     numClassEntered = CountEntered();
+    //     if (numClassEntered == 4) {
+    //         SceneManager.LoadScene("CongratsLibrary");
+    //     }
+    //     else if(amountLeftEnergy > 0 || amountLeftMood > 0) {
+    //         SceneManager.LoadScene("CongratsLibrary");
+    //     }
+    // } 
 
     public float GetHour() {
         return  ((currentTime * hoursInDay / dayDuration) + 9);
