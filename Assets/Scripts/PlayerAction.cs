@@ -7,7 +7,7 @@ public class PlayerAction : MonoBehaviour
 {
     //public float speed = 5f;
     public float moveForce = 10f;
-    public float jumpForce = 11f;
+    public float jumpForce = 20f;
     private float movementX;
 
     private Rigidbody2D theBody;

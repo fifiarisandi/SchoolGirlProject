@@ -14,7 +14,6 @@ public class NewDialogue : MonoBehaviour
     void Start()
     {
         textComponent.text = string.Empty;
-        //textComponent.text = "I hate lazy people!";
         StartDialogue();
         
     }

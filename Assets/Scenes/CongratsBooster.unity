@@ -149,7 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 31805577}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70bd2d377aa5f49f3a48e79cea03bd5f, type: 3}
+  m_Script: {fileID: 11500000, guid: d809621685c37448694c4212567e7292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &31805579
@@ -457,7 +457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 250}
+  m_AnchoredPosition: {x: 0, y: 250}
   m_SizeDelta: {x: 1200, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &820229580
@@ -767,7 +767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -178}
+  m_AnchoredPosition: {x: 0, y: -178}
   m_SizeDelta: {x: 350, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1908521404
@@ -815,7 +815,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 31805578}
-        m_TargetAssemblyTypeName: ScheduleController, Assembly-CSharp
+        m_TargetAssemblyTypeName: BoosterController, Assembly-CSharp
         m_MethodName: BacktoHallway
         m_Mode: 1
         m_Arguments:

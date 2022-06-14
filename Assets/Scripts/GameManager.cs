@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     //GameOver
     string timeNow;
-    Boolean isGameOver;
+    public Boolean isGameOver;
     int checkHour;
     int checkMin;
 
@@ -31,10 +31,10 @@ public class GameManager : MonoBehaviour
     int classEnteredOnTime = 0;
     int numClassEnteredOnTime;
     int classEntered = 0;
-    int numClassEntered;
+    int numClassEntered = 0;
     int entry;
-    // Boolean isEntered;
-    // Boolean roomEntered;
+    public Boolean isEnteredOnTime = false;
+    //int boosterPageCounter = 0;
    
     
     private void Awake() {
@@ -61,19 +61,11 @@ public class GameManager : MonoBehaviour
         totalTime += Time.deltaTime;
         currentTime = totalTime % dayDuration;
 
-        //checkBar
-        // if (amountLeftEnergy <= 50) {
-        //      Debug.Log("You are almost running out of energy. Make better choices!");
-        // }
-        // else if(amountLeftMood <=60) {
-        //     Debug.Log("You are almost running out of mood. Make better choices!");
-        // }
-
         //GameOver
-        CheckResult();
+        if (CheckResult() == true) {
+            SceneManager.LoadScene("GameOver");
+        }
 
-        //Win
-        // CheckWin();
     }
 
     public float TakeDamageEnergy(float damage) {
@@ -109,27 +101,39 @@ public class GameManager : MonoBehaviour
     }
 
     //Gameover
-    public void CheckResult() {
+    public Boolean CheckResult() {
         timeNow = Clock24H();
         checkHour = Mathf.FloorToInt(GetHour());
         checkMin = Mathf.FloorToInt(GetMinutes());
-        numClassEnteredOnTime = CountEnteredOnTime(entry);
-        numClassEntered = CountEntered(entry);
+        //numClassEnteredOnTime = CountEnteredOnTime(entry);
+        //numClassEntered = CountEntered(entry);
+        //numClassEntered = CountBoosterScene();
         //roomEntered = CheckEntered();
         
         if (timeNow == "19:00") {
             isGameOver = true;
-            SceneManager.LoadScene("GameOver");
+            // return isGameOver;
+            //SceneManager.LoadScene("GameOver");
         }
         else if (amountLeftEnergy <= 0 || amountLeftMood <= 0) {
-            SceneManager.LoadScene("GameOver");
+            isGameOver = true;
+            // return isGameOver;
+            //SceneManager.LoadScene("GameOver");
         }
-        else if(numClassEnteredOnTime == 4) {
-            SceneManager.LoadScene("CongratsLibrary");
-        }
+        return isGameOver;
+        // else if (numClassEntered == 4) {
+        //      SceneManager.LoadScene("CongratsLibrary");
+        // }
         // else if(amountLeftEnergy > 0 || amountLeftMood > 0) {
-        //     if(numClassEntered != 0) {
-        //         SceneManager.LoadScene("CongratsLibrary");
+        //     if(classEntered == 4) {
+        //         //WaitForSeconds(5f);
+        //         //SceneManager.LoadScene("CongratsLibrary");
+        //         Debug.Log("numClassEntered is 4? " + classEntered);
+        //     }
+        //     else if (classEntered > 4) {
+        //         //WaitForSeconds(5f);
+        //         //SceneManager.LoadScene("GameOver");
+        //         Debug.Log("numClassEntered is bigger than 4? " + classEntered);
         //     }
         // }
         // else if (checkHour != 9 && checkMin != 0) { 
@@ -138,15 +142,20 @@ public class GameManager : MonoBehaviour
         // }
     }
 
-    public int CountEnteredOnTime(int counter) {
-        classEnteredOnTime += counter;
-        return classEnteredOnTime;
-    }
+    // public int CountEnteredOnTime(int counter) {
+    //     classEnteredOnTime += counter;
+    //     return classEnteredOnTime;
+    // }
 
-    public int CountEntered(int counters) {
-        classEntered += counters;
-        return classEntered;
-    }
+    // public int CountEntered(int counters) {
+    //     classEntered += counters;
+    //     return classEntered;
+    // }
+
+    // public int CountBoosterScene(int counting) {
+    //     classEntered += counting;
+    //     return classEntered;
+    // }
 
     // public Boolean CheckEntered() {
     //     isEntered = true;

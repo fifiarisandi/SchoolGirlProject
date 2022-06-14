@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CongratsBooster.unity
     guid: bea43a02c5b584afeb4557def4492edc
+  - enabled: 1
+    path: Assets/Scenes/Guideline.unity
+    guid: 4bccb0214faa348d5ad9c3ac5c2e30b7
   m_configObjects: {}
