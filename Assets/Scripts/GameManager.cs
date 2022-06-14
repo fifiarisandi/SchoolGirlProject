@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     int classEntered = 0;
     int numClassEntered = 0;
     int entry;
-    public Boolean isEnteredOnTime = false;
+    //public Boolean isEnteredOnTime = false;
     //int boosterPageCounter = 0;
    
     
@@ -65,6 +65,9 @@ public class GameManager : MonoBehaviour
         if (CheckResult() == true) {
             SceneManager.LoadScene("GameOver");
         }
+        // if (isGameOver == true) {
+        //     SceneManager.LoadScene("GameOver");
+        // }
 
     }
 
@@ -103,8 +106,9 @@ public class GameManager : MonoBehaviour
     //Gameover
     public Boolean CheckResult() {
         timeNow = Clock24H();
-        checkHour = Mathf.FloorToInt(GetHour());
-        checkMin = Mathf.FloorToInt(GetMinutes());
+        isGameOver = false;
+        // checkHour = Mathf.FloorToInt(GetHour());
+        // checkMin = Mathf.FloorToInt(GetMinutes());
         //numClassEnteredOnTime = CountEnteredOnTime(entry);
         //numClassEntered = CountEntered(entry);
         //numClassEntered = CountBoosterScene();

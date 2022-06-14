@@ -17,6 +17,7 @@ public class ClickManager : MonoBehaviour
 
     //checking Enter
     int counting;
+    Boolean isOver;
 
     void Start() {
         gm = FindObjectOfType<GameManager>();
@@ -38,11 +39,12 @@ public class ClickManager : MonoBehaviour
 
                     enterHour = Mathf.FloorToInt(gm.GetHour());
                     enterMin = Mathf.FloorToInt(gm.GetMinutes());
-                    counting = 1;
+                    isOver = gm.CheckResult();
+                    //counting = 1;
 
-                    if (gm.isGameOver == false) {
-                        SceneManager.LoadScene ("Classroom");
-                    }
+                    // if (isOver == false) {
+                    //     SceneManager.LoadScene ("Classroom");
+                    // }
 
                     //on time 9 to 9.15
                     if (enterHour == 9 ) {
@@ -71,20 +73,21 @@ public class ClickManager : MonoBehaviour
                     gm.TakeDamageMood(moodChange);
                     //gm.CheckEntered();
                     //gm.CountEntered(counting);
-                    // if (gm.isGameOver == true) {
-                    //     SceneManager.LoadScene ("Classroom");
-                    // }
+                    if (isOver == false) {
+                        SceneManager.LoadScene ("Classroom");
+                    }
                 } 
                 else if (hit.collider.gameObject.name == "Library door") {
                     //get the timestamp
 
                     enterHour = Mathf.FloorToInt(gm.GetHour());
                     enterMin = Mathf.FloorToInt(gm.GetMinutes());
-                    counting = 1;
+                    isOver = gm.CheckResult();
+                    //counting = 1;
 
-                    if (gm.isGameOver == false) {
-                        SceneManager.LoadScene ("Library");
-                    }
+                    // if (isOver == false) {
+                    //     SceneManager.LoadScene ("Library");
+                    // }
 
                     //on time 11 to 11.15
                     if (enterHour == 11 ) {
@@ -113,9 +116,9 @@ public class ClickManager : MonoBehaviour
                     gm.TakeDamageMood(moodChange);
                     //gm.CheckEntered();
                     //gm.CountEntered(counting);
-                    // if (gm.isGameOver == true) {
-                    //     SceneManager.LoadScene ("Library");
-                    // }
+                    if (isOver == false) {
+                        SceneManager.LoadScene ("Library");
+                    }
                 } 
                 else if (hit.collider.gameObject.name == "Cafe door") {
                     //get the timestamp
@@ -151,9 +154,9 @@ public class ClickManager : MonoBehaviour
                     gm.HealingMood(moodChange);
                     //gm.CheckEntered();
                     //gm.CountEntered(counting);
-                    if (gm.isGameOver == false) {
-                        SceneManager.LoadScene ("Cafeteria");
-                    }
+                    // if (gm.isGameOver == false) {
+                    //     SceneManager.LoadScene ("Cafeteria");
+                    // }
                 } 
                   
                 else if (hit.collider.gameObject.name == "Gym door") {
@@ -169,7 +172,7 @@ public class ClickManager : MonoBehaviour
                             energyChange = 30;
                             moodChange = 20;
                             //gm.CountEnteredOnTime(counting);
-                            gm.isEnteredOnTime = true;
+                            //gm.isEnteredOnTime = true;
                         }
                         //late a bit 16.15 to 16.30
                         else if (enterMin > 15 && enterMin <= 30) {
@@ -191,9 +194,9 @@ public class ClickManager : MonoBehaviour
                     gm.HealingMood(moodChange);
                     //gm.CheckEntered();
                     //gm.CountEntered(counting);
-                    if (gm.isGameOver == false) {
-                        SceneManager.LoadScene ("Gym");
-                    }
+                    // if (gm.isGameOver == false) {
+                    //     SceneManager.LoadScene ("Gym");
+                    // }
                 }
 
             }
