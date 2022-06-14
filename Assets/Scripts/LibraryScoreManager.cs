@@ -23,10 +23,6 @@ public class LibraryScoreManager : MonoBehaviour
                 
                 gameStatusEvent();
             }
-            // else {
-            //     gameStatusEvent();
-            // }
-        //else kalo ga dapet ga dapet 4 bubbles and uda abis, lgsg balik ke hallway
         }
     }
 

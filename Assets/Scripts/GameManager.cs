@@ -26,15 +26,6 @@ public class GameManager : MonoBehaviour
     public Boolean isGameOver;
     int checkHour;
     int checkMin;
-
-    //Win
-    int classEnteredOnTime = 0;
-    int numClassEnteredOnTime;
-    int classEntered = 0;
-    int numClassEntered = 0;
-    int entry;
-    //public Boolean isEnteredOnTime = false;
-    //int boosterPageCounter = 0;
    
     
     private void Awake() {
@@ -61,13 +52,7 @@ public class GameManager : MonoBehaviour
         totalTime += Time.deltaTime;
         currentTime = totalTime % dayDuration;
 
-        //GameOver
-        if (CheckResult() == true) {
-            SceneManager.LoadScene("GameOver");
-        }
-        // if (isGameOver == true) {
-        //     SceneManager.LoadScene("GameOver");
-        // }
+        CheckLoadScene();
 
     }
 
@@ -96,9 +81,6 @@ public class GameManager : MonoBehaviour
     }
 
     void LibraryGameListener() {
-        //booster scene
-        //boosterEarned = 10;
-        //HealingEnergy(boosterEarned);
         SceneManager.LoadScene("CongratsBooster");
 
     }
@@ -107,74 +89,22 @@ public class GameManager : MonoBehaviour
     public Boolean CheckResult() {
         timeNow = Clock24H();
         isGameOver = false;
-        // checkHour = Mathf.FloorToInt(GetHour());
-        // checkMin = Mathf.FloorToInt(GetMinutes());
-        //numClassEnteredOnTime = CountEnteredOnTime(entry);
-        //numClassEntered = CountEntered(entry);
-        //numClassEntered = CountBoosterScene();
-        //roomEntered = CheckEntered();
         
         if (timeNow == "19:00") {
             isGameOver = true;
-            // return isGameOver;
-            //SceneManager.LoadScene("GameOver");
         }
         else if (amountLeftEnergy <= 0 || amountLeftMood <= 0) {
             isGameOver = true;
-            // return isGameOver;
-            //SceneManager.LoadScene("GameOver");
         }
         return isGameOver;
-        // else if (numClassEntered == 4) {
-        //      SceneManager.LoadScene("CongratsLibrary");
-        // }
-        // else if(amountLeftEnergy > 0 || amountLeftMood > 0) {
-        //     if(classEntered == 4) {
-        //         //WaitForSeconds(5f);
-        //         //SceneManager.LoadScene("CongratsLibrary");
-        //         Debug.Log("numClassEntered is 4? " + classEntered);
-        //     }
-        //     else if (classEntered > 4) {
-        //         //WaitForSeconds(5f);
-        //         //SceneManager.LoadScene("GameOver");
-        //         Debug.Log("numClassEntered is bigger than 4? " + classEntered);
-        //     }
-        // }
-        // else if (checkHour != 9 && checkMin != 0) { 
-        //     // add condition belum pernah play
-        //      SceneManager.LoadScene("CongratsLibrary");
-        // }
+        
     }
 
-    // public int CountEnteredOnTime(int counter) {
-    //     classEnteredOnTime += counter;
-    //     return classEnteredOnTime;
-    // }
-
-    // public int CountEntered(int counters) {
-    //     classEntered += counters;
-    //     return classEntered;
-    // }
-
-    // public int CountBoosterScene(int counting) {
-    //     classEntered += counting;
-    //     return classEntered;
-    // }
-
-    // public Boolean CheckEntered() {
-    //     isEntered = true;
-    //     return isEntered;
-    // }
-
-    // public void CheckWin() {
-    //     numClassEntered = CountEntered();
-    //     if (numClassEntered == 4) {
-    //         SceneManager.LoadScene("CongratsLibrary");
-    //     }
-    //     else if(amountLeftEnergy > 0 || amountLeftMood > 0) {
-    //         SceneManager.LoadScene("CongratsLibrary");
-    //     }
-    // } 
+    public void CheckLoadScene() {
+        if (CheckResult() == true) {
+            SceneManager.LoadScene("GameOver");
+        }
+    }
 
     public float GetHour() {
         return  ((currentTime * hoursInDay / dayDuration) + 9);

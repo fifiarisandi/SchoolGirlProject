@@ -42,16 +42,11 @@ public class ClickManager : MonoBehaviour
                     isOver = gm.CheckResult();
                     //counting = 1;
 
-                    // if (isOver == false) {
-                    //     SceneManager.LoadScene ("Classroom");
-                    // }
-
                     //on time 9 to 9.15
                     if (enterHour == 9 ) {
                         if (enterMin >= 0 && enterMin <= 15) {
                             energyChange = 40;
                             moodChange = 30;
-                            //gm.CountEnteredOnTime(counting);
                         }
                         //late a bit 9.15 to 9.30
                         else if (enterMin > 15 && enterMin <= 30) {
@@ -71,8 +66,7 @@ public class ClickManager : MonoBehaviour
                     }
                     gm.TakeDamageEnergy(energyChange);
                     gm.TakeDamageMood(moodChange);
-                    //gm.CheckEntered();
-                    //gm.CountEntered(counting);
+                    
                     if (isOver == false) {
                         SceneManager.LoadScene ("Classroom");
                     }
@@ -85,16 +79,11 @@ public class ClickManager : MonoBehaviour
                     isOver = gm.CheckResult();
                     //counting = 1;
 
-                    // if (isOver == false) {
-                    //     SceneManager.LoadScene ("Library");
-                    // }
-
                     //on time 11 to 11.15
                     if (enterHour == 11 ) {
                         if (enterMin >= 0 && enterMin <= 15) {
                             energyChange = 40;
                             moodChange = 30;
-                            //gm.CountEnteredOnTime(counting);
                         }
                         //late a bit 11.15 to 11.30
                         else if (enterMin > 15 && enterMin <= 30) {
@@ -114,8 +103,7 @@ public class ClickManager : MonoBehaviour
                     }
                     gm.TakeDamageEnergy(energyChange);
                     gm.TakeDamageMood(moodChange);
-                    //gm.CheckEntered();
-                    //gm.CountEntered(counting);
+                    
                     if (isOver == false) {
                         SceneManager.LoadScene ("Library");
                     }
@@ -152,11 +140,10 @@ public class ClickManager : MonoBehaviour
                     }
                     gm.HealingEnergy(energyChange);
                     gm.HealingMood(moodChange);
-                    //gm.CheckEntered();
-                    //gm.CountEntered(counting);
-                    // if (gm.isGameOver == false) {
-                    //     SceneManager.LoadScene ("Cafeteria");
-                    // }
+                    
+                    if (isOver == false) {
+                        SceneManager.LoadScene ("Cafeteria");
+                    }
                 } 
                   
                 else if (hit.collider.gameObject.name == "Gym door") {
@@ -192,11 +179,9 @@ public class ClickManager : MonoBehaviour
                     }
                     gm.HealingEnergy(energyChange);
                     gm.HealingMood(moodChange);
-                    //gm.CheckEntered();
-                    //gm.CountEntered(counting);
-                    // if (gm.isGameOver == false) {
-                    //     SceneManager.LoadScene ("Gym");
-                    // }
+                    if (isOver == false) {
+                        SceneManager.LoadScene ("Gym");
+                    }
                 }
 
             }
